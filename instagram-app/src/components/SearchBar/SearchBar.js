@@ -3,7 +3,13 @@ import React from "react";
 class SearchBar extends React.Component {
     render() {
         return ( 
-            <input type="text" placeholder="search..." />
+            <input 
+            type="text"
+            name="search"
+            // value={this.props.newSearch}
+            placeholder="search..."
+            onChange={this.props.searchFilter}
+            />
         );
     }
 }
