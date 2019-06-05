@@ -18,7 +18,8 @@ class App extends React.Component {
 }
 
   searchFilter = e => {
-    const filtered = this.state.data.filter(post => post.username.toLowerCase().includes(e.target.value.toLowerCase()))
+    const filtered = this.state.data.filter(post => post.username.toLowerCase().includes(e.target.value.toLowerCase()) || 
+    post.likes.toString().includes(e.target.value.toString()))
     this.setState({ filteredPosts: filtered})
   }
 
