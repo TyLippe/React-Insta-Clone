@@ -12,13 +12,13 @@ class LikeButton extends React.Component {
       this.setState({ liked: !this.state.liked});
     }
 
-    handleLikes(event) {
-        if (this.state.liked === true) {
-            this.state.likes++
-        } else {
-            this.state.likes--
-        }
-    }
+    // handleLikes(event) {
+    //     if (this.state.liked === true) {
+    //         this.state.likes++
+    //     } else {
+    //         this.state.likes--
+    //     }
+    // }
 
     render() {
         let likeButtonText = this.state.liked ? 
@@ -29,7 +29,7 @@ class LikeButton extends React.Component {
         <button 
         onClick={ (e) => {
             this.handleClick(e);
-            this.handleLikes(e);
+            // this.handleLikes(e);
             }}
         className="like">
           {likeButtonText}
