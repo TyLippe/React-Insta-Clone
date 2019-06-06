@@ -1,4 +1,15 @@
 import React from "react";
+import styled from "styled-components";
+
+const UserName = styled.h3`
+    color: #c51f5d;
+    font-size: 20px;
+`;
+
+const Comment = styled.div`
+    line-height: .5;
+    padding-bottom: .5px;
+`;
 
 class CommentSection extends React.Component {
     state = {
@@ -29,8 +40,10 @@ class CommentSection extends React.Component {
                     return (
                     <>
 
-                    <h3>{comment.username}</h3>
+                    <Comment>
+                    <UserName>{comment.username}</UserName>
                     <p>{comment.text}</p>
+                    </Comment>
 
                     </>
                     )

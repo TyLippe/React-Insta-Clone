@@ -2,7 +2,6 @@ import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import PostContainer from "./PostContainer";
 import dummyData from "../../dummy-data";
-import LogOut from "../Login/LogOut";
 
 class PostsPage extends React.Component {
     state = { 
@@ -36,8 +35,6 @@ render() {
           newSearch={this.state.search} 
           searchFilter={this.searchFilter}
           />
-  
-        <LogOut />
 
         <PostContainer 
           data={this.state.data} 

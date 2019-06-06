@@ -1,4 +1,11 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
+
+const LogOutButton = styled.button`
+    background-color: white;
+    border: none;
+    margin-top: 6px;
+`;
 
 class LogOut extends React.Component {
     
@@ -9,10 +16,10 @@ class LogOut extends React.Component {
     
     render() {
         return (
-            <button
+            <LogOutButton
             onClick={this.logout}>
                 Log Out
-            </button>
+            </LogOutButton>
         )
     }
 }
