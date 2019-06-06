@@ -9,7 +9,7 @@ class CommentSection extends React.Component {
     addNewComment = e => {
         e.preventDefault();
         const newComment = {
-            username: "Ty",
+            username: this.state.username,
             text: this.state.newComment
         }
         this.setState({ comments: [...this.state.comments, newComment], newComment: ""})

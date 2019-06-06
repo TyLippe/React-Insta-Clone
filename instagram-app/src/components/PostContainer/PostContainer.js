@@ -1,5 +1,6 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
+import LikeButton from "../CommentSection/LikeButton";
 
 class PostContainer extends React.Component {
     render() {
@@ -20,7 +21,10 @@ class PostContainer extends React.Component {
                         <img src={post.imageUrl}
                         alt="main image" />
                         
-                        <section className="likebar">
+                        <LikeButton />
+
+                        <section 
+                        className="likebar">
                             {post.likes} likes
                         </section>
                         
