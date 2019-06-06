@@ -3,13 +3,15 @@ import React from "react";
 class CommentSection extends React.Component {
     state = {
         comments: this.props.comments,
-        newComment: ""
+        newComment: "",
+        user: this.props.username,
+        newUser: ""
     }
     
     addNewComment = e => {
         e.preventDefault();
         const newComment = {
-            username: this.state.username,
+            username: localStorage.getItem("user"),
             text: this.state.newComment
         }
         this.setState({ comments: [...this.state.comments, newComment], newComment: ""})
